@@ -1,0 +1,40 @@
+<section class="body">
+    <div class="container text-center">
+        <div class="hero-wrapper">
+            <div class="burger-img"><img src="../public/assets/images/kissclipart-png-hamburguesa-icon-clipart-hamburger-french-frie-93234c30b61d248a.png" alt="burger image"></div>
+            <div class="burger-title text-center">
+                <h1>Eat-Da-Burger</h1>
+            </div>
+        </div>
+
+        <div>
+            <div class="burger-devour-wrapper">
+                <ul>
+                {{#each burgers}}
+                    {{#unless devour}}
+                    {{> burgers/burger-block devour=true}}
+                    {{/unless}}
+                {{/each}}
+                </ul>
+            </div>
+            <div class="burger-devour-wrapper">
+                <ul>
+                {{#each burgers}}
+                    {{#if devour}}
+                    <li>
+                         {{ name }}
+                    </li>
+                    {{/if}}
+                {{/each}}
+                </ul>
+            </div>
+        </div>
+        
+        <div class="form-wrapper">
+            <form id="burger-form">
+                <input type="text" name="burger-type" placeholder="Type of burger">
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+    </div>
+</section>

@@ -1,0 +1,14 @@
+.body {
+    height: 100vh;
+    background-color: #FFD16E;
+    padding-top: 60px;
+}
+
+.burger-devour-wrapper {
+    width: 50%;
+    float: left;
+}
+
+.burger-devour-wrapper li {
+    list-style-type: none;
+}
